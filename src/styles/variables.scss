@@ -1,0 +1,21 @@
+$backgroundColor: white;
+$headerColor: #b2b2b2;
+$btnBgColor: #e5e5e5;
+$btnBackColor: #333333;
+$btnOkColor: #4d4d4d;
+$btnCancelColor: #cccccc;
+$activeColor: #999999;
+
+@mixin flexMixin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin btnMixin($bgColor, $fontSize) {
+    @include flexMixin();
+    background-color: $bgColor;
+    .btn-span {
+        font-size: $fontSize !important;
+    }
+}

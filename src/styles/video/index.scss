@@ -1,0 +1,102 @@
+@import '../variables.scss';
+
+.video-list {
+    width: 100%;
+    height: 30rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: $headerColor;
+        border-radius: 20px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: linear-gradient($btnBgColor, $btnBgColor);
+        border: 1px solid $btnOkColor;
+        border-radius: 10px;
+        background-size: 10px 30px; 
+    }
+    &::-webkit-scrollbar-button {
+        height: 100%; 
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: $btnOkColor;
+    }
+
+}
+.video-card {
+    height: 8rem;
+    margin: 3rem;
+    background-color: $btnBgColor;
+    border: 3px solid $headerColor;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: relative;
+    &:hover {
+        cursor: pointer;
+    }
+    .video-content {
+        width: 30%;
+        height: 90%;
+        background-color: $backgroundColor;
+        border-radius: 5px;
+        margin-right: 5px;
+        padding: 0.5rem;
+        overflow: auto;
+        span {
+            width: 20%;
+            height: 7rem;
+            font-size: 12px;
+            word-wrap: break-word;
+            text-overflow: ellipsis;
+        }
+    }
+    .btn-stamp {
+        width: 5.5rem;
+        height: 2.5rem;
+        position: absolute;
+        top: -0.8rem;
+        right: 33%;
+        div {
+            display: inline-block;
+            padding: 1px;
+            span {
+                width: 2.6rem;
+                height: 2.6rem;
+                border-radius: 50%;
+                background-color: white;
+                border: 2px solid $headerColor;
+                font-size: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                white-space: nowrap; 
+                overflow: hidden; 
+                text-overflow: ellipsis;
+            }
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .stamp {
+            span {
+                background: linear-gradient(to right,  #ffd700, #ffeb00);
+            }
+        }
+        .question { 
+            span {
+                background: linear-gradient(to right,  #ffd700, #ffeb00);
+            }
+        }
+    }
+}
+.video-used {
+    background-color: $activeColor;
+}
